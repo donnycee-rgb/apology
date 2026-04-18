@@ -1,0 +1,389 @@
+/* ══════════════════════════════════════════
+   MAIN.CSS — Base, screens, terminal, final
+══════════════════════════════════════════ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+  --wa-bg: #0b141a;
+  --wa-header: #202c33;
+  --wa-bubble-in: #202c33;
+  --wa-bubble-out: #005c4b;
+  --wa-text: #e9edef;
+  --wa-text-dim: #8696a0;
+  --wa-timestamp: #8696a0;
+  --wa-tick: #53bdeb;
+  --wa-divider: #222e35;
+  --wa-input: #2a3942;
+  --blue: #4da6ff;
+  --blue-soft: #1a3a5c;
+  --blue-glow: rgba(77, 166, 255, 0.15);
+  --green-terminal: #4ade80;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: 0.25s ease;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: var(--wa-bg);
+  font-family: var(--font);
+  color: var(--wa-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Progress Bar ─────────────────────── */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255,255,255,0.05);
+  z-index: 9999;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--blue), #a78bfa);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 8px var(--blue);
+}
+
+/* ── Screens ─────────────────────────── */
+.screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+
+.screen.active {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 10;
+}
+
+/* ── Intro Screen ─────────────────────── */
+#intro-screen {
+  background: var(--wa-bg);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.intro-content {
+  width: 100%;
+  max-width: 360px;
+}
+
+/* ── Terminal Loader ──────────────────── */
+.terminal-loader {
+  background: #0d1117;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(77,166,255,0.06);
+  animation: fadeUp 0.6s ease both;
+}
+
+.terminal-top-bar {
+  background: #161b22;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.t-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.t-dot.red    { background: #ff5f57; }
+.t-dot.yellow { background: #febc2e; }
+.t-dot.green  { background: #28c840; }
+
+.t-title {
+  margin-left: 0.5rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.3);
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-body {
+  padding: 1.2rem 1.25rem 1.5rem;
+  min-height: 130px;
+}
+
+.terminal-line {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--green-terminal);
+  line-height: 1.8;
+  min-height: 1.44rem;
+  white-space: pre;
+}
+
+.terminal-cursor {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--green-terminal);
+  animation: blink 0.9s step-end infinite;
+  display: inline;
+}
+
+/* ── Intro Card ───────────────────────── */
+.intro-card {
+  text-align: center;
+  animation: fadeUp 0.7s ease both;
+  padding-top: 0.5rem;
+}
+
+.intro-lock {
+  font-size: 2.8rem;
+  margin-bottom: 1.25rem;
+  animation: pulse 2s ease infinite;
+}
+
+.intro-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--wa-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.intro-subtitle {
+  font-size: 0.92rem;
+  color: var(--wa-text-dim);
+  line-height: 1.65;
+  margin-bottom: 2.2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: var(--transition);
+  box-shadow: 0 0 28px var(--blue-glow);
+}
+
+.btn-primary:hover  { background: #70b8ff; transform: translateY(-2px); }
+.btn-primary:active { transform: scale(0.97); }
+
+.intro-note {
+  margin-top: 1.1rem;
+  font-size: 0.72rem;
+  color: var(--wa-text-dim);
+  opacity: 0.6;
+}
+
+/* ── Final Screen ─────────────────────── */
+#final-screen {
+  background: var(--wa-bg);
+  overflow-y: auto;
+  align-items: center;
+  padding: 2rem 1.25rem 5rem;
+}
+
+#final-screen::-webkit-scrollbar { width: 3px; }
+#final-screen::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+.final-content {
+  max-width: 500px;
+  width: 100%;
+  animation: fadeUp 0.7s ease both;
+}
+
+.final-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--wa-divider);
+}
+
+.final-tag {
+  font-size: 0.68rem;
+  color: var(--blue);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  opacity: 0.8;
+}
+
+.final-title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--wa-text);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+/* ── Letter Body (typewriter) ─────────── */
+.letter-body {
+  background: var(--wa-header);
+  border-radius: 12px;
+  padding: 1.6rem;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--blue);
+  min-height: 80px;
+}
+
+.letter-body p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--wa-text);
+  margin-bottom: 1rem;
+  opacity: 0.92;
+}
+
+.letter-body p:last-child { margin-bottom: 0; }
+
+.letter-body em {
+  color: var(--blue);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.letter-sign {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--wa-divider);
+  color: var(--wa-text-dim) !important;
+  font-size: 0.88rem !important;
+}
+
+.letter-sign strong { color: var(--blue); }
+
+/* Typewriter cursor inside letter */
+.tw-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--blue);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+/* ── Tomorrow Box ─────────────────────── */
+.tomorrow-box {
+  background: linear-gradient(135deg, var(--blue-soft), rgba(26,58,92,0.4));
+  border: 1px solid rgba(77,166,255,0.25);
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  box-shadow: 0 0 30px rgba(77,166,255,0.06);
+}
+
+.tomorrow-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tomorrow-label {
+  font-size: 0.72rem;
+  font-family: 'Courier New', monospace;
+  color: var(--blue);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+  opacity: 0.8;
+}
+
+.tomorrow-text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--wa-text);
+  opacity: 0.9;
+}
+
+/* ── Response Section ─────────────────── */
+.response-section {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.response-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-response {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 100px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: var(--transition);
+}
+
+.btn-yes {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 0 24px var(--blue-glow);
+}
+
+.btn-yes:hover  { background: #70b8ff; transform: translateY(-2px); box-shadow: 0 0 40px rgba(77,166,255,0.35); }
+.btn-yes:active { transform: scale(0.97); }
+
+.response-sent {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--blue-soft);
+  border-radius: 12px;
+  color: var(--blue);
+  font-size: 0.9rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* ── Shared ───────────────────────────── */
+.hidden { display: none !important; }
+
+/* ── Animations ───────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.1); }
+}

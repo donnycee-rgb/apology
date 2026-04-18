@@ -1,0 +1,180 @@
+/* ══════════════════════════════════════════
+   DATA.JS — Conversation array
+   Edit apology texts here. Add messages here.
+   Types: "message" | "apology" | "date" | "system"
+══════════════════════════════════════════ */
+
+const CONVERSATION = [
+
+  // ─── April 3 ────────────────────────────
+  { type: "date", text: "April 3, 2026" },
+  { type: "system", text: "Messages and calls are end-to-end encrypted." },
+  { type: "message", sender: "me",  text: "Oooh hujui kikalee 😂😂🫴", timestamp: "20:22" },
+
+  // ─── April 12 ───────────────────────────
+  { type: "date", text: "April 12, 2026" },
+  { type: "message", sender: "ivy", text: "Text me more so that i can piss you off with it 😂😂 napenda kuitumia", timestamp: "16:10" },
+  { type: "message", sender: "me",  text: "nakutafuta nakuuuua wallai", timestamp: "16:11" },
+  { type: "message", sender: "ivy", text: "Hahaaa 😂😂 utachoka", timestamp: "16:12" },
+  { type: "message", sender: "me",  text: "As long as hujai tumia madam 😂😂🫴", timestamp: "16:39" },
+  { type: "message", sender: "ivy", text: "Haiyaaa... Utazipata tuhh... There's time", timestamp: "16:45" },
+  { type: "message", sender: "me",  text: "Uuum before tufike hapo 😂😂🌚", timestamp: "16:48" },
+  { type: "message", sender: "ivy", text: "Turiaaa tuhh.. Utakam 😂😂😂", timestamp: "16:51" },
+  { type: "message", sender: "me",  text: "Nikitoka wapi 😂💔", timestamp: "17:12" },
+  { type: "message", sender: "ivy", text: "Azn itakam", timestamp: "17:27" },
+  { type: "message", sender: "me",  text: "🖼️", timestamp: "17:46", isSticker: true },
+  { type: "message", sender: "ivy", text: "🖼️", timestamp: "18:37", isSticker: true },
+  { type: "message", sender: "me",  text: "🖼️", timestamp: "18:59", isSticker: true },
+
+  // ─── April 15 ───────────────────────────
+  { type: "date", text: "April 15, 2026" },
+  { type: "message", sender: "me",  text: "muongoo", timestamp: "18:18" },
+  { type: "message", sender: "ivy", text: "Nilikuwa navassss 🥹🥹", timestamp: "19:00" },
+  { type: "message", sender: "me",  text: "Thats so thoughtful 😂😭", timestamp: "20:31" },
+  { type: "message", sender: "ivy", text: "🥹🥹 Whatt 😂", timestamp: "20:32" },
+  { type: "message", sender: "me",  text: "Tumaaa 😭", timestamp: "20:35" },
+  { type: "message", sender: "ivy", text: "I will 🥹🥹", timestamp: "20:41" },
+  { type: "message", sender: "me",  text: "Sawaaa", timestamp: "20:44" },
+  { type: "message", sender: "me",  text: "Anyway uko aje", timestamp: "20:44" },
+  { type: "message", sender: "ivy", text: "Niko poa.. Umeshindaje?", timestamp: "20:46" },
+  { type: "message", sender: "me",  text: "Nimeshinda fity", timestamp: "20:49" },
+  { type: "message", sender: "me",  text: "Lakni am sick.. homaa", timestamp: "20:49" },
+  { type: "message", sender: "ivy", text: "Naiss", timestamp: "21:36" },
+  { type: "message", sender: "ivy", text: "Woiii.. Pole 🥲", timestamp: "21:37" },
+
+  // ─── April 17 ───────────────────────────
+  { type: "date", text: "April 17, 2026" },
+  { type: "message", sender: "me",  text: "Uuuum 😭😂", timestamp: "00:22" },
+  { type: "message", sender: "ivy", text: "Wassuppp", timestamp: "01:11" },
+
+  // ─── April 18 — The Night ────────────────
+  { type: "date", text: "April 18, 2026" },
+
+  { type: "message", sender: "me",  text: "Heheee 😂😂 u up for a conversation?? 🌚", timestamp: "22:01" },
+  { type: "message", sender: "ivy", text: "Yeap.. Sure", timestamp: "22:02" },
+  { type: "message", sender: "me",  text: "How are you??", timestamp: "22:02" },
+  { type: "message", sender: "me",  text: "Nimeboeka fugggg 😭😂", timestamp: "22:02" },
+  { type: "message", sender: "ivy", text: "I'm good.. How are you?", timestamp: "22:02" },
+  { type: "message", sender: "ivy", text: "Wassup 😂😭", timestamp: "22:02" },
+  { type: "message", sender: "me",  text: "Am fine", timestamp: "22:03" },
+  { type: "message", sender: "me",  text: "Haki wallai chukueni rafiki yenu sasa 😭😭😂", timestamp: "22:03" },
+  { type: "message", sender: "ivy", text: "🖼️", timestamp: "22:03", isSticker: true },
+  { type: "message", sender: "ivy", text: "Heii... N nn mbaya", timestamp: "22:03" },
+  { type: "message", sender: "me",  text: "Vile nafanyiwo uku 😭😭 what if.... i was not the compatible friend for jackie??", timestamp: "22:04" },
+
+  // ══ APOLOGY #1 ══
+  {
+    type: "apology",
+    text: "Jacky — I know this is the part that hurts most. And I need you to hear me clearly.\n\nWhen I said \"what if I was not the compatible friend for Jackie\" — that Jackie is you. I was talking about us. About whether I was even good enough to be the person you deserve — as a friend first, and as someone who wants more than that.\n\nI wasn't hiding you behind another name. I was pouring out genuine confusion to Ivy because I was hurting and I didn't know how to say it to your face. That was cowardly of me. But every word was about you — because you're the one I actually care about."
+  },
+
+  { type: "message", sender: "ivy", text: "Wassup... kwanj what going on?", timestamp: "22:05" },
+  { type: "message", sender: "me",  text: "Uuum what do you mean unanikasirikia juu sijui nataka nini?? 😭", timestamp: "22:05" },
+  { type: "message", sender: "ivy", text: "Ilikuwa kuhusu nn hio ndio umekasirikiwa?", timestamp: "22:06" },
+  { type: "message", sender: "me",  text: "Tulikiwa nje nikasema naeza kula mutura.... akaniuliza nataka ya ngapi nikasema pesa anataka akaanza makasiriko... so as to run away from all that nikasema sitaki tena", timestamp: "22:07" },
+  { type: "message", sender: "me",  text: "Waitt 😭😭😂", timestamp: "22:07" },
+  { type: "message", sender: "ivy", text: "Yoooh... mbn useme hutaki 😭😂😂 heiiiii", timestamp: "22:09" },
+  { type: "message", sender: "me",  text: "Sitaki tena... nimekumbuka naeza umwa na tumbo", timestamp: "22:10" },
+  { type: "message", sender: "ivy", text: "🖼️", timestamp: "22:11", isSticker: true },
+  { type: "message", sender: "ivy", text: "Eiii... unajua mm nashindwa n nyinyi akky 😂😂😂", timestamp: "22:11" },
+  { type: "message", sender: "me",  text: "Ebu usishindwe... ndio nasema maybe we were not compatible friends 😭😭", timestamp: "22:12" },
+  { type: "message", sender: "ivy", text: "Sawa.. Acha nijaribu 😂... Friends n mnadate? 🫴", timestamp: "22:12" },
+  { type: "message", sender: "me",  text: "Uuum but at first we were friends 🙂‍↔️ 😂 if we weren't friends at the first place arungedate", timestamp: "22:13" },
+  { type: "message", sender: "ivy", text: "Yeah.. I get you.. I feel like by now you should already know what would make her mad", timestamp: "22:16" },
+  { type: "message", sender: "ivy", text: "I'd rather ungesema..... Staki mutura tena juu ya tumbo... but tutembee tu I'll take sth else instead... That's kinda better", timestamp: "22:17" },
+  { type: "message", sender: "me",  text: "Yeah i know but there is more", timestamp: "22:17" },
+  { type: "message", sender: "me",  text: "U see we actually broke up 🌚", timestamp: "22:18" },
+  { type: "message", sender: "me",  text: "U can be an advisor Ivy 🥹", timestamp: "22:18" },
+  { type: "message", sender: "ivy", text: "Ik.. But that's one of the smallest detail you should have known", timestamp: "22:18" },
+  { type: "message", sender: "ivy", text: "Oooww... 😮", timestamp: "22:19" },
+  { type: "message", sender: "ivy", text: "Aaauwww 🤭😂... I can.. but hio n vile i am a girl so najua", timestamp: "22:19" },
+  { type: "message", sender: "me",  text: "🖼️", timestamp: "22:20", isSticker: true },
+  { type: "message", sender: "ivy", text: "🖼️", timestamp: "22:26", isSticker: true },
+  { type: "message", sender: "me",  text: "Cheptoo 😂😂 can u be my friend now 😂😂 u like know a lot.... na ni weird kuuliza stranger advice 😂😂", timestamp: "22:30" },
+  { type: "message", sender: "ivy", text: "Fr?? 🥹..... Kwani unaulizanga strangers? 😂", timestamp: "22:35" },
+  { type: "message", sender: "me",  text: "Naaah 😂😂 okay u are a friend but am talking about a friend friend", timestamp: "22:36" },
+  { type: "message", sender: "ivy", text: "Mmmh... Suree 💯", timestamp: "22:42" },
+  { type: "message", sender: "me",  text: "🖼️", timestamp: "22:57", isSticker: true },
+  { type: "message", sender: "me",  text: "Acha nipikie mpoa 🫠😂", timestamp: "22:57" },
+  { type: "message", sender: "ivy", text: "🖼️", timestamp: "22:58", isSticker: true },
+  { type: "message", sender: "ivy", text: "Mmmmh.. Okayy 🙌...", timestamp: "22:58" },
+
+  // ══ APOLOGY #2 ══
+  {
+    type: "apology",
+    text: "This conversation went deeper than I expected — and I want you to know why I kept going.\n\nEverything I was saying to Ivy about compatibility, about the future, about the people I want in my life — I was thinking about you. About whether I was the right person to stand next to you as things get more serious.\n\nI was scared to say that directly to you. So I said it to Ivy instead. That was wrong. You deserved to hear it from me, not a version of it filtered through someone else. I'm sorry for that."
+  },
+
+  { type: "message", sender: "me",  text: "now being advisor i need some advice cheptoo i promise ya mwisho", timestamp: "23:00" },
+  { type: "message", sender: "me",  text: "u spoke of being self centered.. now kukazia jackie kuchoma is it a form of being self centered", timestamp: "23:00" },
+  { type: "message", sender: "ivy", text: "😂 Nmekuwa advisor fully tena 😂😂", timestamp: "23:01" },
+  { type: "message", sender: "me",  text: "yiessss.. nimeona uko na sense mingi", timestamp: "23:01" },
+  { type: "message", sender: "ivy", text: "I feel like according to what you told me earlier.. You want her to quit just because \"you don't like associating with people who do drugs\" remember you said that?", timestamp: "23:07" },
+  { type: "message", sender: "ivy", text: "That is definitely being self centered... because you just want it to fit your wants... Not really from their own decisions...", timestamp: "23:08" },
+  { type: "message", sender: "ivy", text: "Eiii", timestamp: "23:08" },
+  { type: "message", sender: "me",  text: "But its bad for your own health", timestamp: "23:12" },
+  { type: "message", sender: "ivy", text: "That wasn't your first claim as far as i can remember....", timestamp: "23:13" },
+  { type: "message", sender: "me",  text: "Secondly there is something coming up in the future... u see this thing.... i know someone who can fit in this.... i know of someone who is in Jackie's field and i want to involve her as i move forward... her and Nelson... and as much as i know that man doesn't like certain behaviour around him", timestamp: "23:14" },
+  { type: "message", sender: "me",  text: "I know but u know i couldn't give you everything at once.. i gave u one of the reasons..... actually there are lots of reasons", timestamp: "23:14" },
+  { type: "message", sender: "me",  text: "So i was right about compatibility", timestamp: "23:15" },
+  { type: "message", sender: "ivy", text: "Exactly..... Unataka i fit to what is going on in your life.... That's not convincing enough for someone to quit drugs... I feel like you have to make her understand... Tho mm sijawai kuwa kwa hio position", timestamp: "23:16" },
+  { type: "message", sender: "ivy", text: "I feel you", timestamp: "23:17" },
+  { type: "message", sender: "ivy", text: "You are right but for someone using drugs as antidepressants.. It's not as easy as you think... sm like mm msee akiniambia niwache due to this or that.. N easier juu naweza zitumia hata once a month", timestamp: "23:18" },
+  { type: "message", sender: "ivy", text: "Imagine sitetei... Juu mm. I can't remember the last time... Ilikuwa feb ama.. Juu last month was my birth month.. And i didn't even do it on my birthday just because.... mm naweza wacha mbio sana..... But trust me it's not easy", timestamp: "23:20" },
+
+  // ══ APOLOGY #3 ══
+  {
+    type: "apology",
+    text: "Jacky, this is the moment everything fell apart. While this conversation was happening — you came in. You saw the screen. You asked to see the chats and I said no.\n\nI said no because I was embarrassed. Because it looked like everything it wasn't. Because I froze.\n\nThat was wrong of me. You deserved honesty in that moment and I gave you a wall instead. I'm so sorry for that. What happened next — the \"fuck you\", the silence — I understand. I earned that reaction."
+  },
+
+  { type: "message", sender: "me",  text: "nimekasirikiwa tena 😭😭😭 nimepatikana nikiongea na wewe akaniambia nimuonyeshe chats nikakataa coz its embarrassing menh nimeambiwa fuck you at the end... i think thats it now", timestamp: "23:26" },
+  { type: "message", sender: "ivy", text: "🖼️", timestamp: "23:27", isSticker: true },
+  { type: "message", sender: "ivy", text: "Kwani hujui ku archive messages ukiona akikam??", timestamp: "23:27" },
+  { type: "message", sender: "me",  text: "ameingia once then ukatext message ikatokea kwa lapi...... i was coding literally alikuwa ameangalia screen", timestamp: "23:28" },
+  { type: "message", sender: "ivy", text: "Hehee... hapa nayo huwezi saidika huskii... mm nakuwanga na a way ya ku hide chats then I'll talk to sm when i want.. That's what i do to your chats juu unahofia yusuf asome 🫴", timestamp: "23:29" },
+  { type: "message", sender: "me",  text: "Ni mbaaaya", timestamp: "23:30" },
+  { type: "message", sender: "me",  text: "Sasa nani atanifungulia mlango yake shually 😭💔", timestamp: "23:30" },
+  { type: "message", sender: "ivy", text: "Sana sanaaa... ww ndio unamfanya anikasirikie sana sanaaa", timestamp: "23:30" },
+  { type: "message", sender: "ivy", text: "😂😂😂 Bisha tuh 😂", timestamp: "23:31" },
+  { type: "message", sender: "me",  text: "Shieeett ziii... i never expected that", timestamp: "23:31" },
+  { type: "message", sender: "me",  text: "Actually on the contrary i was preparing her heart for ur apology and it was coming out nicely", timestamp: "23:31" },
+  { type: "message", sender: "me",  text: "Sasa sai sijui 😭😭", timestamp: "23:31" },
+  { type: "message", sender: "me",  text: "Amelala 😭 amezima stima", timestamp: "23:32" },
+  { type: "message", sender: "ivy", text: "It's crazzyy", timestamp: "23:32" },
+  { type: "message", sender: "me",  text: "Nataka mniombeeee", timestamp: "23:33" },
+  { type: "message", sender: "ivy", text: "omg 🥲 idk what to say", timestamp: "23:33" },
+  { type: "message", sender: "me",  text: "🖼️", timestamp: "23:33", isSticker: true },
+  { type: "message", sender: "ivy", text: "Sidhani analala straight away", timestamp: "23:33" },
+  { type: "message", sender: "me",  text: "I was really pushing for it", timestamp: "23:33" },
+  { type: "message", sender: "ivy", text: "Tunakuombea.. Sijui mbn hazikushika 😂😂", timestamp: "23:33" },
+  { type: "message", sender: "me",  text: "Analia most prob 😭", timestamp: "23:33" },
+  { type: "message", sender: "me",  text: "Sieeet, 😭", timestamp: "23:33" },
+  { type: "message", sender: "ivy", text: "Ooow 🥹🥹", timestamp: "23:34" },
+  { type: "message", sender: "ivy", text: "Yeah 💔💔😌", timestamp: "23:34" },
+  { type: "message", sender: "ivy", text: "Ikkk 🥹🥹🥹🥲", timestamp: "23:34" },
+  { type: "message", sender: "ivy", text: "But i really do miss her frr 🥹🥲 she was soo true... I fucked up fr... Being self centered can be both good and bad fr 🥹🥲", timestamp: "23:35" },
+  { type: "message", sender: "me",  text: "Self centered... i don't even fully understand the meaning of that word but i now really hate it", timestamp: "23:36" },
+  { type: "message", sender: "ivy", text: "Huskii mwambie tuh what's up... Or??... Idk fr... We're fucking up with her alot frr", timestamp: "23:36" },
+  { type: "message", sender: "me",  text: "Shieeeet 😭😭😭💔 how do i clear this up now", timestamp: "23:37" },
+  { type: "message", sender: "ivy", text: "It's like minding alot about what sth is gonna do to you and not considering anyone else....... Ama we should stop conversing... Ama?... mm idk fr", timestamp: "23:38" },
+  { type: "message", sender: "me",  text: "I have an idea", timestamp: "23:38" },
+  { type: "message", sender: "ivy", text: "Uuuuuwiii.... Idk", timestamp: "23:38" },
+  { type: "message", sender: "me",  text: "What if i orchestrate a meet up between u guys???", timestamp: "23:38" },
+  { type: "message", sender: "ivy", text: "Tell me", timestamp: "23:38" },
+  { type: "message", sender: "me",  text: "Will kill two birds with one stone", timestamp: "23:39" },
+  { type: "message", sender: "ivy", text: "Eiiii... ... omg... 🫴☠️🥲", timestamp: "23:39" },
+  { type: "message", sender: "me",  text: "Yeap we need to do this asap", timestamp: "23:39" },
+  { type: "message", sender: "ivy", text: "Convince me...", timestamp: "23:39" },
+  { type: "message", sender: "me",  text: "Shieet", timestamp: "23:39" },
+  { type: "message", sender: "me",  text: "U see u'll apologise in a much more effective way", timestamp: "23:40" },
+  { type: "message", sender: "me",  text: "Then it clears the fog around us u see??", timestamp: "23:40" },
+  { type: "message", sender: "ivy", text: "I don't think so fr", timestamp: "23:41" },
+  { type: "message", sender: "ivy", text: "I see your point.. But.. Really?", timestamp: "23:41" },
+  { type: "message", sender: "ivy", text: "Remember mm nko home sai", timestamp: "23:42" },
+  { type: "message", sender: "me",  text: "Hujai rudi bado?", timestamp: "23:42" },
+  { type: "message", sender: "ivy", text: "Nmeenda leo... Hata ilikuwa abruptly.. Had to do sth real quick", timestamp: "23:47" },
+  { type: "message", sender: "me",  text: "Oooh", timestamp: "23:54" },
+  { type: "message", sender: "ivy", text: "Yeaah", timestamp: "23:55" },
+
+];

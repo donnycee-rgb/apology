@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>For Jacky 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/chat.css" />
+  <link rel="stylesheet" href="css/modals.css" />
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <div id="progress-bar"><div id="progress-fill"></div></div>
+
+  <!-- INTRO SCREEN -->
+  <div id="intro-screen" class="screen active">
+    <div class="intro-content">
+      <div class="terminal-loader" id="terminal-loader">
+        <div class="terminal-top-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">preparing_something.exe</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line" id="tl-1">&nbsp;</div>
+          <div class="terminal-line" id="tl-2">&nbsp;</div>
+          <div class="terminal-line" id="tl-3">&nbsp;</div>
+          <div class="terminal-line" id="tl-4">&nbsp;</div>
+          <div class="terminal-cursor" id="t-cursor">█</div>
+        </div>
+      </div>
+      <div class="intro-card hidden" id="intro-card">
+        <div class="intro-lock">💙</div>
+        <h1 class="intro-title">For Jacky</h1>
+        <p class="intro-subtitle">There's something I need you to see.<br/>Please give me five minutes of your time.</p>
+        <button class="btn-primary" id="btn-start">Open 💙</button>
+        <p class="intro-note">This is private. Only you have this link.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAT SCREEN -->
+  <div id="chat-screen" class="screen">
+    <div class="wa-header">
+      <div class="wa-header-back">&#8592;</div>
+      <div class="wa-avatar">
+        <div class="wa-avatar-img">I</div>
+        <div class="wa-avatar-status"></div>
+      </div>
+      <div class="wa-header-info">
+        <div class="wa-header-name">Ivyy</div>
+        <div class="wa-header-sub" id="header-sub">tap here for contact info</div>
+      </div>
+      <div class="wa-header-icons">
+        <span>📹</span><span>📞</span><span>⋮</span>
+      </div>
+    </div>
+    <div class="speed-control">
+      <span class="speed-label">Speed:</span>
+      <button class="speed-btn active" data-speed="1">1×</button>
+      <button class="speed-btn" data-speed="2">2×</button>
+      <button class="speed-btn" data-speed="0">Skip</button>
+    </div>
+    <div class="wa-background" id="chat-container">
+      <div id="messages-wrap"></div>
+      <div id="typing-indicator" class="typing-indicator hidden">
+        <div class="typing-bubble"><span></span><span></span><span></span></div>
+        <p class="typing-label">Ivy is typing...</p>
+      </div>
+    </div>
+    <div class="wa-input-bar">
+      <div class="wa-input-emoji">😊</div>
+      <div class="wa-input-field">Message</div>
+      <div class="wa-input-attach">📎</div>
+      <div class="wa-input-mic">🎤</div>
+    </div>
+  </div>
+
+  <!-- APOLOGY MODAL -->
+  <div id="apology-modal" class="modal-overlay hidden">
+    <div class="apology-card">
+      <div class="apology-avatar">C</div>
+      <div class="apology-tag">// note from Cira</div>
+      <div class="apology-text" id="apology-text"></div>
+      <button class="btn-continue" id="btn-continue">Continue reading ›</button>
+    </div>
+  </div>
+
+  <!-- FINAL SCREEN -->
+  <div id="final-screen" class="screen">
+    <div class="final-content">
+      <div class="final-header">
+        <div class="final-tag">// final_commit.exe</div>
+        <h2 class="final-title">To Jacky, with everything I have</h2>
+      </div>
+      <div class="letter-body" id="letter-body"></div>
+      <div class="tomorrow-box" id="tomorrow-box">
+        <div class="tomorrow-label">📍 One ask</div>
+        <p class="tomorrow-text">
+          I don't have a restaurant or a grand plan or anything impressive.<br/><br/>
+          I just want to be with you tomorrow.<br/>
+          That's all. If you'll have me.
+        </p>
+      </div>
+      <div class="response-section" id="response-section">
+        <button class="btn-response btn-yes" id="btn-forgive">
+          Yes, you can 💙
+        </button>
+        <div id="response-sent" class="response-sent hidden">
+          <p>He already knows. He'll be waiting. 💙</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/wema.mp4" type="video/mp4" />
+  </audio>
+
+  <script src="js/data.js"></script>
+  <script src="js/parser.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/notify.js"></script>
+
+</body>
+</html>
